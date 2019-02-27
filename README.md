@@ -35,21 +35,27 @@ To give you notifications panache - use an http `POST` request. You can include 
 #### Shell
 
 ```shell
-curl -X POST -H "Content-Type: application/json" -d '{data}' https://maker.ifttt.com/trigger/{event}/with/key/{key}
+curl -X POST -H "Content-Type: application/json" \
+-d '{data}' \
+https://maker.ifttt.com/trigger/{event}/with/key/{key}
 ```
 
 ```shell
-curl -X POST -H "Content-Type: application/json" -d '{"value1":"Artwork by Picasso", "value2":"https://bit.ly/1KMoKoN"}' https://maker.ifttt.com/trigger/{event}/with/key/{key}
+curl -X POST -H "Content-Type: application/json" \
+-d '{"value1":"Artwork by Picasso", "value2":"https://bit.ly/1KMoKoN"}' \
+https://maker.ifttt.com/trigger/{event}/with/key/{key}
 ```
 
 #### Python
 
 ```python
 import requests
-requests.post('https://maker.ifttt.com/trigger/{event}/with/key/{key}', data = {data})
+address = 'https://maker.ifttt.com/trigger/{event}/with/key/{key}'
+requests.post(address, data = {data})
 ```
 
 ```python
 import requests
-requests.post('https://maker.ifttt.com/trigger/{event}/with/key/{key}', data = {"value1":"Artwork by Picasso", "value2":"https://bit.ly/1KMoKoN"})
+address = 'https://maker.ifttt.com/trigger/{event}/with/key/{key}'
+requests.post(address, data = {"value1":"Artwork by Picasso", "value2":"https://bit.ly/1KMoKoN"})
 ```
