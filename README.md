@@ -30,7 +30,7 @@ requests.get(https://maker.ifttt.com/trigger/{event}/with/key/{key})
 ```
 
 ### POST
-To give you notifications panache - use an http `POST` request. You can include data in the request body as JSON with keys `value1` `value2` `value3` that map to message ingredients. For example `{"value1":"success}` would subsitute `value1` with "success" in the message template.
+To give your notifications panache - use an http `POST` request. You can include data in the request body as JSON with keys `value1` `value2` `value3` that map to message ingredients. For example `{"value1":"success}` would subsitute `value1` with "success" in the message template.
 
 #### Shell
 
