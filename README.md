@@ -20,7 +20,7 @@ To trigger the webhook - you just need to send an http request. I've included ex
 The quickest way to trigger your webhook is an http `GET` request. Seriously, navigate to `https://maker.ifttt.com/trigger/{event}/with/key/{key}` in a web-browser. You will recieved a plain html page with the text `Congratulations! You've fired the {event} event` and a mobile notification.
 
 #### Shell
-```shell
+```
 curl https://maker.ifttt.com/trigger/{event}/with/key/{key}
 ```
 #### Python
@@ -34,13 +34,13 @@ To give your notifications panache - use an http `POST` request. You can include
 
 #### Shell
 
-```shell
+```
 curl -X POST -H "Content-Type: application/json" \
 -d '{data}' \
 https://maker.ifttt.com/trigger/{event}/with/key/{key}
 ```
 
-```shell
+```
 curl -X POST -H "Content-Type: application/json" \
 -d '{"value1":"Artwork by Picasso", "value2":"https://bit.ly/1KMoKoN"}' \
 https://maker.ifttt.com/trigger/{event}/with/key/{key}
